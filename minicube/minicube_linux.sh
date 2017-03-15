@@ -22,6 +22,8 @@ fedora)
     sudo yum -y install libvirt-daemon-kvm kvm
     sudo usermod -a -G libvirt $(whoami)
     newgrp libvirt
+    sudo systemctl enable libvirt-guests.service
+    sudo systemctl start libvirt-guests.service
     ;;
 debian)
     sudo apt -y install libvirt-bin qemu-kvm
@@ -34,7 +36,6 @@ debian)
     ;;
 esac
 
-sudo systemctl enable libvirt-guests.service
-sudo systemctl start libvirt-guests.service
+minikube start --vm-driver=kvm
 
-minikube start --driver-vm=kvm
+cd ~/
