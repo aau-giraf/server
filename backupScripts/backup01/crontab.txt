@@ -1,0 +1,1 @@
+30 04 * * * find /srv/backup/*/*/* -type f -mtime +3 -exec rm {} \\; >/dev/null 2>&1

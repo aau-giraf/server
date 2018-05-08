@@ -1,0 +1,3 @@
+#Backup of Gogs repositories, logs, and Gogs mysql db
+00 23 * * * cd /home/backup && sh backup-git.sh 174de25f0fcd > /dev/null &1
+00 23 * * * cd /home/backup && sh backup-git.sh 96b4a9b1a123 > /dev/null &1

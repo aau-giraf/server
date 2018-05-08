@@ -1,0 +1,6 @@
+#Backup af Webadmin
+00 23 * * * cd /home/backup && sh backup.sh 0469686ec332 "" > /dev/null &1
+#Backup af phabricator-web
+00 23 * * * cd /home/backup && sh backup.sh aadb4a0780f7 "" > /dev/null &1
+#Backup af phabricator-database
+00 23 * * * cd /home/backup && sh backup.sh ab1e81f47648 "" > /dev/null &1
