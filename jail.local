@@ -1,0 +1,17 @@
+[DEFAULT]
+# Ban hosts for an hour:
+bantime = 3600
+
+# A host is banned if it has generated "maxretry" during the last "findtime"
+# seconds.
+findtime  = 3600
+
+# "maxretry" is the number of failures before a host get banned.
+maxretry = 10
+
+# Override /etc/fail2ban/jail.d/00-firewalld.conf:
+banaction = iptables-multiport
+
+[sshd]
+enabled = true
+
