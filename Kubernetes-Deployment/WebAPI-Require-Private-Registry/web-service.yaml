@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: giraf-webapi-service
+spec:
+  ports:
+  - port: 5000
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: giraf-webapi
+
+

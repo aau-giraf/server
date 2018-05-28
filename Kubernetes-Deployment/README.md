@@ -1,0 +1,1 @@
+All folders named with "without helm" is as of 28/05/2018 depricated. 

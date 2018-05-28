@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: giraf-webapi
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: giraf-webapi
+    spec:
+      containers:
+      - name: giraf-webapi
+        image: 127.0.0.1:8080/my-webapi
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: AUTHOR
+          value: giraf-webapi
+        ports:
+        - containerPort: 5000
+
+

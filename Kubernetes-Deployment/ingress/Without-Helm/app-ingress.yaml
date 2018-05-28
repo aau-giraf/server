@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: app-ingress
+spec:
+  rules:
+  - host: app1.kubernetes.giraffe
+    http:
+      paths:
+      - backend:
+          serviceName: mysql
+          servicePort: 80
+        path: /app1

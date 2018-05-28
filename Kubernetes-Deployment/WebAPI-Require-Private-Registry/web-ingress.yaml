@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: app-ingress
+spec:
+  rules:
+  - host: api.giraf.cs.aau.dk
+    http:
+      paths:
+      - backend:
+          serviceName: giraf-webapi-service
+          servicePort: 5000
