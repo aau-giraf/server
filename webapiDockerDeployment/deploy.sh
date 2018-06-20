@@ -17,7 +17,7 @@ version_production='production'
 version_release='release'
 
 path="/tmp/web-api_"
-url_git='http://git.giraf.cs.aau.dk/Giraf-Rest/web-api.git'
+url_git='https://gitlab.giraf.cs.aau.dk/Server/web-api.git'
 log="deploy.log"
 
 mode=$1
